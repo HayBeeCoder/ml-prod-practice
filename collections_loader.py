@@ -1,4 +1,5 @@
 import pandas as pd
+from loguru import logger
 
 def load_collections(file_path="rent_apartments.csv"):
     """
@@ -10,7 +11,8 @@ def load_collections(file_path="rent_apartments.csv"):
     Returns:
     pd.DataFrame: A DataFrame containing the collections data.
     """
-    df = pd.read_csv(file_path)
-    return df
+    logger.info(f"Loading collections from {file_path}")
+    return pd.read_csv(file_path)
+    
   
     
